@@ -1,0 +1,112 @@
+/* Home page */
+
+.option {
+    letter-spacing: 2px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    padding: 7px;
+    color: #ebfcfc;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 24px;
+    font-style :italic;
+    border: none transparent;
+    }
+
+    .simpleButton {
+        letter-spacing: 2px;
+        cursor: pointer;
+        vertical-align: middle;
+        text-align: center;
+        padding: 7px;
+        color: #ebfcfc;
+    background-image :linear-gradient(to right, rgb(39, 153, 177), #fe7ec9);
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    border: none transparent;
+border-radius: 8px;
+}
+
+.tile {
+    background-image :linear-gradient(to right, rgb(39, 153, 177), #fe7ec9);
+    color: #ebfcfc;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 200px;
+    max-height: 150px;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 24px;
+    font-style :italic;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px 34px 17px;
+    overflow-wrap :break-word;
+}
+
+/* Tic Tac Toe game */
+.game {
+    font: 14px 'Open Sans',sans-serif;
+    margin: 6px;
+    padding: 10px;
+    min-height: 200px;
+    border:solid #999;
+    border-width: 2px 0 0 2px;
+  }
+  
+  .game-board {
+    min-width: 100px;
+  }
+
+  .game ol,
+  .game ul {
+    padding-left: 30px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .restart {
+    margin-top: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  
+  .square:focus {
+    outline: none;
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+    min-width: 190px;
+  }
+  
