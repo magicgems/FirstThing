@@ -1,36 +1,100 @@
-/* Home page */
-
-.option {
-    letter-spacing: 2px;
-    cursor: pointer;
-    vertical-align: middle;
-    text-align: center;
-    padding: 7px;
-    color: #ebfcfc;
-    background-color: transparent;
-    text-decoration: none;
-    font-family: 'Open Sans',sans-serif;
-    font-size: 24px;
-    font-style :italic;
-    border: none transparent;
-    }
-
-    .simpleButton {
-        letter-spacing: 2px;
-        cursor: pointer;
-        vertical-align: middle;
-        text-align: center;
-        padding: 7px;
-        color: #ebfcfc;
-    background-image :linear-gradient(to right, rgb(39, 153, 177), #fe7ec9);
-    font-family: 'Open Sans',sans-serif;
-    font-size: 16px;
-    border: none transparent;
-border-radius: 8px;
+/* Star */
+.problem {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 18px;
+  background-image :linear-gradient(to right, rgba(255, 255, 255, 0.8), #8abbe4);
+  width: 250px;
+  padding: 20px 15px 20px;
+  margin: 15px;
+  line-height :40px;
 }
 
-.tile {
-    background-image :linear-gradient(to right, rgb(39, 153, 177), #fe7ec9);
+
+
+.retButton1, .retButton2, .retButton3 {
+  letter-spacing: 0.75px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  padding: 6px 15px;
+  color: #ebfcfc;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 14px;
+  border: none transparent;
+  border-radius: 8px;
+  margin: 0 8px 20px;
+}
+
+.retButton1 {
+  background-image :linear-gradient(to right, rgb(54, 218, 240), #fe7ec9);
+}
+
+.retButton2 {
+  background-image :linear-gradient(to right, #fe7ec9, rgb(130, 224, 93));
+}
+
+.retButton3 {
+  background-image :linear-gradient(to right, rgb(130, 224, 93), #e9ce37);
+}
+
+.totals {
+  font-family: "Comfortaa", sans-serif;
+  display: block;
+  font-size :16px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  margin: 7px;
+  text-align: center;
+  background-color: #ec65cf;
+  color: white;
+  line-height :22px;
+  max-width: 190px;
+}
+
+.subheading {
+  font-family: "Playfair Display", serif;
+  font-size :28px;
+  font-style :italic;
+  font-weight :700;
+  overflow-wrap :break-word;
+  color: #4826c2ad;
+  position: relative;
+  text-align: center;
+}
+
+.inputNumber {
+  width: 70px;
+}
+
+.submit {
+  border-radius: 8px;
+  position: relative;
+  left: 50px;
+  padding: 8px 18px;
+}
+
+/* Utils */
+.tabsPageTitle {
+  font-family: Roboto,sans-serif;
+  font-style :italic;
+  color: #fe7ec9;
+}
+  .option {
+      letter-spacing: 2px;
+      cursor: pointer;
+      vertical-align: middle;
+      text-align: center;
+      padding: 7px;
+      color: #ebfcfc;
+      background-color: transparent;
+      text-decoration: none;
+      font-family: 'Open Sans',sans-serif;
+      font-size: 24px;
+      font-style :italic;
+      border: none transparent;
+    }
+
+  .tile1, .tile2, .tile3 {
     color: #ebfcfc;
     min-width: 50px;
     min-height: 50px;
@@ -43,8 +107,29 @@ border-radius: 8px;
     text-align: center;
     border-radius: 20px;
     padding: 15px 34px 17px;
+    margin: 5px 6px;
     overflow-wrap :break-word;
-}
+    cursor: pointer;
+  }
+
+  .tile1 {
+    background-image :linear-gradient(to right, rgb(54, 218, 240), #fe7ec9);
+  }
+
+  .tile2 {
+    background-image :linear-gradient(to right, #fe7ec9, rgb(130, 224, 93));
+  }
+
+  .tile3 {
+    background-image :linear-gradient(to right, rgb(130, 224, 93), #e9ce37);
+  }
+
+  .login {
+      font: 14px 'Open Sans',sans-serif;
+      margin: 6px;
+      padding: 10px;
+      width: 60px;
+  }
 
 /* Tic Tac Toe game */
 .game {

@@ -1,23 +1,68 @@
 import React, { useState } from 'react';
 import Board from './TicTacToe';
+import Star from './Star';
 import './styles.css';
+import { MultipleTabs } from './utils';
+const IDs = {NONE : '0', AKSHARA : '5762', SAHASRA : '7852'};
+
+function Login() {
+  const [loggedInId, setLoggedInId] = useState('0');
+  const refLoginID = React.useRef();
+  let retElement = null;
+
+  function checkLogin(event) {
+    event.preventDefault();
+    const login = refLoginID.current.value;
+    if (login === IDs.AKSHARA || login === IDs.SAHASRA) {
+      setLoggedInId(login);
+    }
+    else
+      setLoggedInId(IDs.NONE);
+  }
+
+  React.useEffect(() => {
+    refLoginID?.current?.focus();
+  }
+  );
+
+  switch (loggedInId) {
+    case IDs.NONE:
+    retElement = (
+      <form>
+        <div>
+          <input ref={refLoginID} className="login" />
+          <button type="submit" onClick={checkLogin}>Login</button>
+        </div>
+      </form>);
+      break;
+    case IDs.AKSHARA:
+      retElement = <Star />;
+      break;
+    default : 
+      retElement = <div>Hi Sahsi!! Let me know what do you want here? 😎 </div>;
+  }
+  return (retElement);
+}
 
 export default function App() {
   const [selTile, setSelTile] = useState(0);
 
-  function handleTileClick(newSelTile) {
-    setSelTile(newSelTile);
-  }
+  const tabs = [
+    {key: 0, displayName: "Tic Tac Toe", displayComponent: <Board />},
+    {key: 1, displayName: "Login", displayComponent: <Login />}
+  ];
 
+const props = {
+  title: "Activities",
+  selection: selTile,
+  onClick: setSelTile,
+  buttonClass: "tile1",
+  returnButtonClass: "retButton1",
+  returnDisplay: `<< Home page`,
+  tabs: tabs
+}
+  
   return (
-    <>
-      {selTile === 0 ? (
-      <div className="tile">
-        <button className="option" onClick={() => handleTileClick(1)}>Tic Tac Toe</button>
-      </div> 
-      ) : <button className="simpleButton" onClick={() => setSelTile(0)} >Home page</button>
-    }
-      {selTile === 1 ? (<Board />) : null}
-          </>
+    <MultipleTabs {...props} />
   )
 }

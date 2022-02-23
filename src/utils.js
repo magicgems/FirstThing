@@ -2,6 +2,43 @@ import * as React from 'react'
 
 /**
  *
+ * @param {Number} selection - The current tab selected. 0 = No tab selected
+ * @param {Array(Object)} tabs - The tabs' details
+ * @param {String} buttonClass, returnButtonClass - The css styles for tab buttons
+ * @param {Function} onClick - The function to be called on click of tab
+ */
+function MultipleTabs(props) {
+  return (
+    <>
+      {props.selection === 0 ? (
+        <div>
+          <h2 className="tabsPageTitle">{props.title}</h2>
+          <hr></hr>
+          {
+            props.tabs.map((tabItem, index) => (
+              <button className={props.buttonClass} onClick={() => props.onClick(index+1)}>{tabItem.displayName}</button>
+            ))
+          }
+
+        </div> 
+      ) : 
+      <button className={props.returnButtonClass} onClick={() => props.onClick(0)} >{props.returnDisplay}</button>
+      }
+
+      {
+        props.tabs.map((tabItem, index) => (
+          props.selection === (index + 1) && tabItem.displayComponent
+        ))
+      }
+    </>
+  );
+}
+
+export {MultipleTabs}
+
+
+/**
+ *
  * @param {String} key The key to set in localStorage for this value
  * @param {Object} defaultValue The value to use if it is not already in localStorage
  * @param {{serialize: Function, deserialize: Function}} options The serialize and deserialize functions to use (defaults to JSON.stringify and JSON.parse respectively)
