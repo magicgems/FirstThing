@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Board from './TicTacToe';
 import Star from './Star';
+import SmallMath from './SmallMath';
 import './styles.css';
 import { MultipleTabs } from './utils';
 const IDs = {NONE : '0', AKSHARA : '5762', SAHASRA : '7852'};
@@ -39,7 +40,7 @@ function Login() {
       retElement = <Star />;
       break;
     default : 
-      retElement = <div>Hi Sahsi!! Let me know what do you want here? 😎 </div>;
+      retElement = <SmallMath />;
   }
   return (retElement);
 }
@@ -53,7 +54,7 @@ export default function App() {
   ];
 
 const props = {
-  title: "Activities",
+  title: "Welcome",
   selection: selTile,
   onClick: setSelTile,
   buttonClass: "tile1",
